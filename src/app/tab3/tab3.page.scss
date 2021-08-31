@@ -1,0 +1,4 @@
+// Elimino el ::after del header
+ion-header::after {
+    height: 0px;
+}

@@ -1,0 +1,14 @@
+// Elimino el ::after del header
+ion-header::after {
+    height: 0px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 0px 12px 12px 12px;
+    ion-searchbar {
+        padding-top: 8px;
+        padding-inline-end: 0px !important;
+    }
+}
