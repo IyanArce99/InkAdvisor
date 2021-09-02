@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase : {
+    apiKey: "AIzaSyDCcB7GCV_zzfkvK95LCAipHuv5fC6Dkjs",
+    authDomain: "inkadvisor-4cb09.firebaseapp.com",
+    databaseURL: "https://inkadvisor-4cb09-default-rtdb.firebaseio.com",
+    projectId: "inkadvisor-4cb09",
+    storageBucket: "inkadvisor-4cb09.appspot.com",
+    messagingSenderId: "764604856606",
+    appId: "1:764604856606:web:0955a49b455c25ecb3f10f",
+    measurementId: "G-9E8MNBNPE3"
+  }
 };
 
 /*

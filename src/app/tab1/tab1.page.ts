@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirestoreService } from '../services/firestore.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private firestoreService: FirestoreService) {}
 
+  test() {
+    this.firestoreService.addProduct({name: 'nazi'});
+  }
 }
