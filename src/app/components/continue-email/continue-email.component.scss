@@ -3,6 +3,7 @@
     padding: 12px 12px 24px 12px;
     display: flex;
     flex-direction: column;
+    
     .header {
         display: flex;
         width: 100%;
@@ -63,5 +64,17 @@
                 background-color: #eb9b96;
             }
         }
+    }
+}
+.loader{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ion-spinner {
+        color: white;
     }
 }

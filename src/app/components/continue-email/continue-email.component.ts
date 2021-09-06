@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContinueEmailComponent implements OnInit {
   isDisabled: boolean;
-  showLoader: boolean = true;
+  showLoader: boolean;
   mode: string;
 
   // texts
@@ -28,19 +28,22 @@ export class ContinueEmailComponent implements OnInit {
   }
 
   changeMode(): void {
-    if (this.mode === 'register'){
-      this.mode = 'login';
-
-      this.title = 'Logearse';
-      this.link = 'Registrase';
-      this.changeModeInformation = 'No tienes cuenta?';
-    }else {
-      this.mode = 'register';
-
-      this.title = 'Registrase';
-      this.link = 'Logearse';
-      this.changeModeInformation = 'Ya tienes una cuenta?';
-    }
+    this.showLoader = true;
+    setTimeout(() => {
+      if (this.mode === 'register'){
+        this.mode = 'login';
+  
+        this.title = 'Logearse';
+        this.link = 'Registrase';
+        this.changeModeInformation = 'No tienes cuenta?';
+      }else {
+        this.mode = 'register';
+  
+        this.title = 'Registrase';
+        this.link = 'Logearse';
+        this.changeModeInformation = 'Ya tienes una cuenta?';
+      }
+    }, 1500);
   }
 
 }
