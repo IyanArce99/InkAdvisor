@@ -10,10 +10,16 @@ import { ContinueEmailComponent } from 'src/app/components/continue-email/contin
 })
 export class LoginComponent implements OnInit {
 
+  checks: any = {
+    usuario: true,
+    tatuador: false,
+    estudio: false
+  }
+
   constructor(private afAuth: AngularFireAuth, private ngZone: NgZone, private router: Router, private modalController: ModalController) { }
 
   ngOnInit() {
-    this.presentModal();
+    // this.presentModal();
     this.afAuth.signOut();
     this.afAuth.user.subscribe(user => {
       if (user) {
@@ -25,6 +31,25 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  selectedTypeUser(type: string): void {
+    setTimeout(() => {
+      if (type === 'usuario') {
+        this.checks.tatuador = false;
+        this.checks.estudio = false;
+        this.checks.usuario = true;
+      }else if (type === 'tatuador') {
+        this.checks.usuario = false;
+        this.checks.estudio = false;
+        this.checks.tatuador = true;
+      }else {
+        this.checks.tatuador = false;
+        this.checks.usuario = false;
+        this.checks.estudio = true;
+      }
+    })
+  }
+
   async presentModal() {
     const modal = await this.modalController.create({
       component: ContinueEmailComponent,

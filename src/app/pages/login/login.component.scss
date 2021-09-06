@@ -4,7 +4,8 @@
     overflow: hidden;
     padding: 12px;
     height: 100%;
-    background-color: green;
+    background-color: black;
+
     .-header {
         img{ 
             width: 100px;
@@ -16,6 +17,18 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        .type-user {
+            display: flex;
+            gap: 8px;
+            .-type {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                span {
+                    color: white;
+                }
+            }
+        }
         .title {
             display: flex;
             flex-direction: column;

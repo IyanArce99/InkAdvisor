@@ -15,6 +15,8 @@ export class ContinueEmailComponent implements OnInit {
   link: string;
   changeModeInformation: string;
 
+  showPassword;
+  passwordToggleIcon = 'eye';
   constructor() { }
 
   ngOnInit() {
@@ -23,8 +25,16 @@ export class ContinueEmailComponent implements OnInit {
     this.title = 'Registrarse';
     this.link = 'Logearse';
     this.changeModeInformation = 'Ya tienes una cuenta?';
+  }
 
-    this.isDisabled = true;
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+
+    if (this.passwordToggleIcon === 'eye') {
+      this.passwordToggleIcon = 'eye-off';
+    }else {
+      this.passwordToggleIcon = 'eye';
+    }
   }
 
   changeMode(): void {
@@ -43,6 +53,7 @@ export class ContinueEmailComponent implements OnInit {
         this.link = 'Logearse';
         this.changeModeInformation = 'Ya tienes una cuenta?';
       }
+      this.showLoader = false;
     }, 1500);
   }
 

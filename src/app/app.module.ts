@@ -11,10 +11,12 @@ import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContinueEmailComponent } from './components/continue-email/continue-email.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContinueEmailComponent
   ],
   entryComponents: [],
   imports: [
@@ -24,7 +26,7 @@ import { AppComponent } from './app.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

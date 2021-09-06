@@ -8,8 +8,13 @@
       <span>{{title}}</span>
     </div>
     <div class="inputs">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Contraseña">
+      <ion-item class="input-ionic" [lines]="'none'">
+        <ion-input name='email' class="-button" placeholder='Email' [type]="'text'"></ion-input>
+      </ion-item>
+      <ion-item class="input-ionic" [lines]="'none'">
+        <ion-input name='password' placeholder='Contraseña' [type]="showPassword ? 'text': 'password' "></ion-input>
+        <ion-icon slot='end' [name]='passwordToggleIcon' (click)='togglePassword()'></ion-icon>
+      </ion-item>
     </div>
   </div>
 
@@ -17,7 +22,7 @@
     <div class="already-have">
       <span>{{changeModeInformation}}&nbsp;<span class="-link" (click)='changeMode()'>{{link}}</span></span>
     </div>
-    <div class="-button" [ngClass]="{'-disabled': isDisabled}">{{link}}</div>
+    <div class="-button" [ngClass]="{'-disabled': isDisabled}">{{title}}</div>
   </div>
 </div>
 <div class="loader" *ngIf='showLoader'>

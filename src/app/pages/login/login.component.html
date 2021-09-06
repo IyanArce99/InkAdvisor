@@ -8,6 +8,20 @@
             <span>Get inspired.</span>
             <span>Get tattooed.</span>
         </div>
+        <div class="type-user">
+            <div class="-type">
+                <ion-checkbox [mode]="'ios'" [checked]='checks.usuario' (click)='selectedTypeUser("usuario")'></ion-checkbox>
+                <span>Usuario</span>                
+            </div>
+            <div class="-type">
+                <ion-checkbox [mode]="'ios'" [checked]='checks.tatuador' (click)='selectedTypeUser("tatuador")'></ion-checkbox>
+                <span>Tatuador</span>                
+            </div>
+            <div class="-type">
+                <ion-checkbox [mode]="'ios'" [checked]='checks.estudio' (click)='selectedTypeUser("estudio")'></ion-checkbox>
+                <span>Estudio</span>                
+            </div>
+        </div>
         <div class="-button -fb">
             <i class="fab fa-facebook-f fa-2x"></i>
             <span>Continuar con Facebook</span>
