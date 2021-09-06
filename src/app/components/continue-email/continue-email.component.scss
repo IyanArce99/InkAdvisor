@@ -12,10 +12,10 @@
         }
     }
     .container-mid {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
-        gap: 34px;
-        margin-top: -12px;
+        gap: 20px;
         .title {
             font-weight: 600;
             font-size: 28px;
@@ -78,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999999;
     ion-spinner {
         color: white;
     }
