@@ -1,0 +1,23 @@
+<div class="container-modal">
+  <div class="header">
+    <img src="../../../assets/logo.png" alt="logo" width="80px">
+  </div>
+
+  <div class="container-mid">
+    <div class="title">
+      <span>{{title}}</span>
+    </div>
+    <div class="inputs">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Contraseña">
+    </div>
+  </div>
+
+  <div class="container-bottom">
+    <div class="already-have">
+      <span>{{changeModeInformation}}&nbsp;<span class="-link" (click)='changeMode()'>{{link}}</span></span>
+    </div>
+    <div class="-button" [ngClass]="{'-disabled': isDisabled}">{{link}}</div>
+  </div>
+  <ion-spinner name="crescent" class="loader" *ngIf='showLoader'></ion-spinner>
+</div>

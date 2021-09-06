@@ -1,6 +1,8 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { ContinueEmailComponent } from 'src/app/components/continue-email/continue-email.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private afAuth: AngularFireAuth, private ngZone: NgZone, private router: Router) { }
+  constructor(private afAuth: AngularFireAuth, private ngZone: NgZone, private router: Router, private modalController: ModalController) { }
 
   ngOnInit() {
+    this.presentModal();
     this.afAuth.signOut();
     this.afAuth.user.subscribe(user => {
       if (user) {
@@ -22,7 +25,15 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: ContinueEmailComponent,
+      cssClass: 'my-custom-class',
+      mode: 'ios',
+      swipeToClose: true,
+    });
+    return await modal.present();
+  }
   crearCongmail(){
    /* const provider = new auth.GoogleAuthProvider();
     return this.AuthLogin(provider)
@@ -44,7 +55,12 @@ export class LoginComponent implements OnInit {
         console.log(error)
     })
   }
-
+  login (typeLogin: string) : void {
+    console.log("Login");
+    if (typeLogin === 'email'){
+      this.presentModal();
+    }
+  }
   // Para crear usuario
   crear() {
     this.afAuth.createUserWithEmailAndPassword("alejokope@gmail.com", "311387alejo").then(() => {
