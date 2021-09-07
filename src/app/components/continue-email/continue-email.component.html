@@ -9,10 +9,10 @@
     </div>
     <div class="inputs">
       <ion-item class="input-ionic" [lines]="'none'">
-        <ion-input name='email' class="-button" placeholder='Email' [type]="'text'"></ion-input>
+        <ion-input name='email' class="-button" placeholder='Email' [type]="'text'" [(ngModel)]='email'></ion-input>
       </ion-item>
       <ion-item class="input-ionic" [lines]="'none'">
-        <ion-input name='password' placeholder='Contraseña' [type]="showPassword ? 'text': 'password' "></ion-input>
+        <ion-input name='password' placeholder='Contraseña' [type]="showPassword ? 'text': 'password' " [(ngModel)]='pass'></ion-input>
         <ion-icon slot='end' [name]='passwordToggleIcon' (click)='togglePassword()'></ion-icon>
       </ion-item>
     </div>
@@ -22,7 +22,7 @@
     <div class="already-have">
       <span>{{changeModeInformation}}&nbsp;<span class="-link" (click)='changeMode()'>{{link}}</span></span>
     </div>
-    <div class="-button" [ngClass]="{'-disabled': isDisabled}">{{title}}</div>
+    <div class="-button" [ngClass]="{'-disabled': isDisabled}" (click)='submitButton()'>{{title}}</div>
   </div>
 </div>
 <div class="loader" *ngIf='showLoader'>

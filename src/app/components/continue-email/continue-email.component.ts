@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-continue-email',
@@ -6,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./continue-email.component.scss'],
 })
 export class ContinueEmailComponent implements OnInit {
+
+  @Input() typeUser: string;
+  
+  email: string = '';
+  pass: string = '';
+
   isDisabled: boolean;
   showLoader: boolean;
   mode: string;
@@ -17,7 +27,7 @@ export class ContinueEmailComponent implements OnInit {
 
   showPassword;
   passwordToggleIcon = 'eye';
-  constructor() { }
+  constructor(private firestoreService: FirestoreService, private afAuth: AngularFireAuth, private router: Router, private modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.mode = 'register';
@@ -55,6 +65,41 @@ export class ContinueEmailComponent implements OnInit {
       }
       this.showLoader = false;
     }, 1500);
+  }
+
+  submitButton(): void {
+    if (this.mode === 'register'){
+      this.afAuth.createUserWithEmailAndPassword(this.email, this.pass).then((e) => {
+        if (e.user?.email && e.user?.uid){
+          this.firestoreService.addElementToCollection({email: e.user.email, typeUser: this.typeUser}, 'users', e.user.uid).then(_snap => {
+            console.log("Add element correctly!");
+            this.mode = 'login';
+          }).catch(err => {
+            console.error('Error: ', err);
+          });
+        }
+      }).catch(response => {
+        console.error("Error: ", response.message)
+      });
+    }else {
+      this.afAuth.signInWithEmailAndPassword(this.email, this.pass).then(e => {
+        if (e.user?.uid){
+          this.firestoreService.getElementOfCollection('users', e.user.uid).subscribe(snapshot=>{
+            let user = {
+              email: snapshot.data().email,
+              typeUser: snapshot.data().typeUser
+            };
+
+            localStorage.setItem('userData', JSON.stringify(user));
+
+            this.router.navigate(['/tabs/tab1']);
+            this.modalCtrl.dismiss();
+          });
+        }
+      }).catch(err => {
+        console.error('Error: ', err);
+      });
+    }
   }
 
 }
