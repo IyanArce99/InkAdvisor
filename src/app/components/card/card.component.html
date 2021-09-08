@@ -6,12 +6,15 @@
       <span class="-subtitle">OVIEDO</span>
     </div>
   </div>
-  <div class="content">
-    contenido
+  <div class="content" *ngIf='true' id="card-content">
+    
+    <div style="min-width: 100%; display: flex; height: 100%; max-height: 200px; transition-duration: 2s;" [ngStyle]="{'transform': 'translateX('+translateXIndex+'px)'}">
+      <img [src]="'../../../assets/imgs/' + pic" alt="pic" *ngFor='let pic of pics;' style="min-width: 100%;"> 
+    </div>
     <div class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <span class="dot" [ngClass]="{'-selected': picSelected === 0}" (click)='changeImg(0)'></span>
+      <span class="dot" [ngClass]="{'-selected': picSelected === 1}" (click)='changeImg(1)'></span>
+      <span class="dot" [ngClass]="{'-selected': picSelected === 2}" (click)='changeImg(2)'></span>
     </div>
   </div>
 </div>

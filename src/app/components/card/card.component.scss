@@ -7,20 +7,25 @@
     .content{
         display: flex;
         flex-direction: column;
-        padding: 8px 20px;
+        overflow: hidden;
         min-height: 100px;
+        position: relative;
         .dots {
             display: flex;
             gap: 8px;
             margin-top: auto;
             justify-content: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 12px;
             .dot {
                 border-radius: 4px;
                 width: 14px;
                 height: 10px;
-                border: 1px solid;
-                &.-actived {
-                    background-color: black;
+                border: 1px solid red;
+                &.-selected {
+                    background-color: red;
                 }
             }
         }
