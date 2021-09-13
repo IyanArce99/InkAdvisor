@@ -11,8 +11,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "skipLibCheck": true,
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "types": [
+      "googlemaps"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
