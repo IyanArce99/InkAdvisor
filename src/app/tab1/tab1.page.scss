@@ -13,12 +13,13 @@ ion-header::after {
     border-radius: 100px;
     background-color: #202125;
     margin-left: 4px;
-    margin-top: -10px;
     ion-icon {
         margin-right: 8px;
         font-size: 32px;
         color: white;
-        transform: rotate(90deg);
+        .-search {
+          transform: rotate(90deg);
+        }
     }
   }
   .input-icono input {
