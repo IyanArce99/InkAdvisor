@@ -1,0 +1,127 @@
+.container-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  padding: 12px;
+  height: 100%;
+  background-color: black;
+}
+
+.container-login .-header img {
+  width: 100px;
+  height: 80px;
+}
+
+.container-login .login-inputs {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.container-login .login-inputs .type-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.container-login .login-inputs .type-user .-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.container-login .login-inputs .type-user .-type span {
+  color: white;
+}
+
+.container-login .login-inputs .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  gap: 4px;
+}
+
+.container-login .login-inputs .terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  color: white;
+}
+
+.container-login .login-inputs .terms a {
+  color: white;
+}
+
+.container-login .login-inputs .-button {
+  background-color: red;
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.container-login .login-inputs .-button i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 16px;
+}
+
+.container-login .login-inputs .-button .fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.container-login .login-inputs .-button.-fb {
+  background-color: #4267B2;
+}
+
+.container-login .login-inputs .-button.-gg {
+  background-color: white;
+  color: black;
+}
+
+.container-login .login-inputs .-button.-gm {
+  background-color: #DE5246;
+}
+/*# sourceMappingURL=login.component.css.map */

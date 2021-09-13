@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,UAAU,AAAA,OAAO,CAAC;EACd,MAAM,EAAE,GAAG;CACd",
+    "sources": [
+        "tab4.page.scss"
+    ],
+    "names": [],
+    "file": "tab4.page.css"
+}

@@ -3,12 +3,14 @@
     <div class="header-top">
       <img src="../../assets/logo.png" alt="logo" width="70px">
       <ion-searchbar animated mode='ios'></ion-searchbar>
-
+      <div class="filters">
+        <ion-icon name="filter-outline"></ion-icon>
+      </div>
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <button (click)='logout()'>LOG OUT</button>
+  <!-- <button (click)='logout()'>LOG OUT</button> -->
   <app-card></app-card>
 </ion-content>

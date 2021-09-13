@@ -1,0 +1,139 @@
+.container-modal {
+  height: 100%;
+  padding: 12px 12px 24px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-modal .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-modal .header img {
+  margin-top: -12px;
+}
+
+.container-modal .container-mid {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.container-modal .container-mid .title {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.container-modal .container-mid .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.container-modal .container-mid .inputs ion-item {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 4px 10px 3px 10px;
+  border: 1px solid  #969493;
+}
+
+.container-modal .container-mid .inputs ion-item:focus {
+  outline: none;
+}
+
+.container-modal .container-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.container-modal .container-bottom .already-have {
+  font-size: 14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container-modal .container-bottom .already-have .-link {
+  color: #DE5246;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container-modal .container-bottom .-button {
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #DE5246;
+}
+
+.container-modal .container-bottom .-button.-disabled {
+  background-color: #eb9b96;
+}
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.96);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999999;
+}
+
+.loader ion-spinner {
+  color: white;
+}
+/*# sourceMappingURL=continue-email.component.css.map */

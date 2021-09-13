@@ -1,0 +1,22 @@
+ion-header::after {
+  height: 0px;
+}
+
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.header-top ion-searchbar {
+  padding-top: 8px;
+}
+
+.header-top .filters {
+  font-size: 25px;
+}
+/*# sourceMappingURL=tab1.page.css.map */

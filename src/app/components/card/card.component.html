@@ -1,14 +1,19 @@
 <div class="container">
   <div class="header">
-    <img src="../../../assets/fondo-login.jpg" alt="img" width="40px">
-    <div class="info">
-      <span class="-title">TU MADRE</span>
-      <span class="-subtitle">OVIEDO</span>
+    <div class="profile">
+      <img src="../../../assets/fondo-login.jpg" alt="img">
+      <div class="info">
+        <span class="-title">Iyán Arcega</span>
+        <span class="-subtitle">OVIEDO</span>
+      </div>
+    </div>
+    <div class="save-profile">
+      <ion-icon name="heart-outline"></ion-icon>
     </div>
   </div>
   <div class="content" *ngIf='true' id="card-content">
     
-    <div style="min-width: 100%; display: flex; height: 100%; max-height: 200px; transition-duration: 2s;" [ngStyle]="{'transform': 'translateX('+translateXIndex+'px)'}">
+    <div class="img-card" [ngStyle]="{'transform': 'translateX('+translateXIndex+'px)'}">
       <img [src]="'../../../assets/imgs/' + pic" alt="pic" *ngFor='let pic of pics;' style="min-width: 100%;"> 
     </div>
     <div class="dots">
