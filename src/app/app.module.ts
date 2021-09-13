@@ -1,3 +1,4 @@
+import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -27,6 +28,10 @@ import { ContinueEmailComponent } from './components/continue-email/continue-ema
     AngularFireAuthModule,
     FormsModule,
     CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCerLaedR6QMviP3MaCObH9CGwAZzPi4Mw',
+      libraries: ['places']
+    })
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
