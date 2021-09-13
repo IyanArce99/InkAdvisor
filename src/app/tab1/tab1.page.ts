@@ -18,13 +18,10 @@ export class Tab1Page implements OnInit {
   ngOnInit(): void {
     this.mapsApi.load().then(() => {
       this.geoCoder = new google.maps.Geocoder;
-
       const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement);
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
-          //get the place result
           const place: any = autocomplete.getPlace();
-          //verify result
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }

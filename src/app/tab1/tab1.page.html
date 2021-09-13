@@ -2,14 +2,15 @@
   <ion-toolbar>
     <div class="header-top">
       <img src="../../assets/logo.png" alt="logo" width="70px">
-      <ion-searchbar animated mode='ios'></ion-searchbar>
-
+      <!--<ion-searchbar animated mode='ios'></ion-searchbar>-->
+      <div class="input-icono">
+        <ion-icon name="search"></ion-icon>
+        <input type="text" name="input" #search>
+      </div>
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <input type="text" #search>
-  <button (click)='logout()'>LOG OUT</button>
   <app-card></app-card>
 </ion-content>
