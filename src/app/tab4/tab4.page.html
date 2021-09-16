@@ -1,16 +1,29 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>
-      Tab 4
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header-perfil">
+    <div class="logo-and-information">
+      <img src="../../assets/fondo-login.jpg" alt="user-img">
+      <div class="-info">
+        <span class="-name">{{name}}</span>
+        <span class="-description">
+            {{description}}
+        </span>
+      </div>
+    </div>
+
+    <div class="actions-buttons">
+      <div class="button-primary">
+        Mensaje
+      </div>
+      <div class="button-secondary">
+        Reserva
+      </div>
+      <ion-icon name="heart"></ion-icon>
+    </div>
+  </div>
+
+  <div class="pictures">
+    <img [src]="'../../assets/imgs/' + pic" alt="pic" *ngFor='let pic of listImgs'>
+
+  </div>
 
 </ion-content>

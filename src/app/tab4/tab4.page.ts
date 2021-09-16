@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['tab4.page.scss']
 })
 export class Tab4Page {
-  
+  listImgs: string[] = ['pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg', 'pic_1.jpg'];
+  name: string = 'Alejo Kope';
+  description: string = 'Hola yo soy un tatuador.'
   constructor() {}
 
 }
