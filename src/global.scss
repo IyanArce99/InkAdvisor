@@ -29,7 +29,18 @@
 ion-tab-bar {
     border-top: 0;
     padding-bottom: 4px;
+    --ion-background-color:#333C4B;
+
     ion-tab-button {
-        color: #333C4B;
+        color: #ffff;
     }
+}
+
+ion-toolbar {
+    --background:#333C4B;
+}
+
+ion-content{
+
+    --ion-background-color:#333C4B;
 }

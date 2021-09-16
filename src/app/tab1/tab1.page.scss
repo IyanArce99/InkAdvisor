@@ -10,12 +10,13 @@ ion-header::after {
     padding-bottom: 5px;
     padding-top: 5px;
     border-radius: 100px;
-    background-color: #333C4B;
+    background-color: #ffff;
     margin-left: 4px;
+    justify-content: space-around;
     ion-icon {
         margin-right: 8px;
         font-size: 32px;
-        color: white;
+        color: #333C4B;
         .-search {
           transform: rotate(90deg);
         }
@@ -24,9 +25,9 @@ ion-header::after {
   .input-icono input {
     font-size: 0.9em;
     border: none;
-    background-color: #333C4B;
+    background-color: #ffff;
     height: 32px;
-    color: white;
+    color: #333C4B;
   }
   .input-icono input:focus {
     outline: none;
