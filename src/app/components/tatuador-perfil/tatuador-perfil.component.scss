@@ -1,0 +1,68 @@
+
+.header-perfil {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 24px;
+    .logo-and-information {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 9999px;
+        }
+        .-info {
+            display: flex;
+            flex-direction: column;
+
+            .-name {
+                font-weight: 600;
+                font-size: 18px;
+            }
+            .-description {
+                font-size: 14px;
+            }
+        }
+    }
+    .actions-buttons {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        ion-icon {
+            font-size: 28px;
+            color: red;
+        }
+        .button-primary {
+            background-color: red;
+            width: calc(50% - 20px);
+            padding: 8px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: green;
+            width: calc(50% - 20px);
+            padding: 8px;
+            border-radius: 25px;
+        }
+    }
+}
+
+.pictures {
+    display: flex;
+    flex-wrap:  wrap;
+    gap: 8px;
+    padding: 12px;
+    img {
+        width: calc(50% - 4px);
+        height: auto;
+        border-radius: 4px;
+    }
+}

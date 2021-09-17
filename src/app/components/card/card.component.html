@@ -1,10 +1,10 @@
 <div class="container">
   <div class="header">
     <div class="profile">
-      <img src="../../../assets/fondo-login.jpg" alt="img">
+      <img src="../../../assets/fondo-login.jpg" alt="img" (click)='presentModal()'>
       <div class="info">
-        <span class="-title">Iyán Arcega</span>
-        <span class="-subtitle">OVIEDO</span>
+        <span class="-title">{{user.name}}</span>
+        <span class="-subtitle">{{user.city}}</span>
       </div>
     </div>
     <div class="save-profile">

@@ -10,6 +10,7 @@ import { FirestoreService } from '../services/firestore.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+  publications: any[] = [];
   @ViewChild("search") public searchElementRef: ElementRef;
   private geoCoder;
 
@@ -43,6 +44,13 @@ export class Tab1Page implements OnInit {
           this.router.navigate(['/login']);
         }
      });
+    });
+
+    // Busco las publicaciones.
+    this.firestoreService.getAllPublications().subscribe(_snapshot => {
+      _snapshot.forEach(_snap => {
+        this.publications.push(_snap.data());
+      });
     });
   }
 

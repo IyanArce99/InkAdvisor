@@ -13,11 +13,13 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContinueEmailComponent } from './components/continue-email/continue-email.component';
+import { TatuadorPerfilComponent } from './components/tatuador-perfil/tatuador-perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContinueEmailComponent
+    ContinueEmailComponent,
+    TatuadorPerfilComponent
   ],
   entryComponents: [],
   imports: [

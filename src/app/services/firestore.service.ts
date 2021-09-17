@@ -9,12 +9,17 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
 
   constructor(private firestore: AngularFirestore, private storage: AngularFireStorage) { }
+  
   addProduct(product: any, collection: string) : void {
     this.firestore.collection(collection).add(product).then(_elem => {
       console.log("Add ");
     }).catch(err => {
       console.log(err);
     });
+  }
+
+  getAllPublications(): Observable<any> {
+    return this.firestore.collection('publications').get();
   }
 
   addElementToCollection(element: any, collection: string, id: string) : Promise<void> {

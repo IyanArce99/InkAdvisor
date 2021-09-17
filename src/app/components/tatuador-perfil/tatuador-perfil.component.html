@@ -1,0 +1,26 @@
+<div class="header-perfil">
+  <div class="logo-and-information">
+    <img src="../../assets/fondo-login.jpg" alt="user-img">
+    <div class="-info">
+      <span class="-name">{{user.name}}</span>
+      <span class="-description">
+          {{description}}
+      </span>
+    </div>
+  </div>
+
+  <div class="actions-buttons">
+    <div class="button-primary">
+      Mensaje
+    </div>
+    <div class="button-secondary">
+      Reserva
+    </div>
+    <ion-icon name="heart"></ion-icon>
+  </div>
+</div>
+
+<div class="pictures">
+  <img [src]="'../../assets/imgs/' + pic" alt="pic" *ngFor='let pic of listImgs'>
+
+</div>
