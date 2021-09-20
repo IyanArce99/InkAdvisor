@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['tab4.page.scss']
 })
 export class Tab4Page {
+  tabs: string[] = ['Publicacion guardadas', 'Artistas guardados'];
+  tabSelected: number = 0;
   constructor() {}
 
+  changeTab(index: number): void {
+    this.tabSelected = index;
+  }
 }

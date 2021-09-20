@@ -2,3 +2,76 @@
 ion-header::after {
     height: 0px;
 }
+.container-total {
+    display: flex;
+    flex-direction: column;
+    .tablero-section {
+        .bar {
+            display: flex;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            justify-content: center;
+            color: white;
+            line-height: 22.17px;
+            .-active {
+                border-bottom: 1px solid white;
+            }
+        }
+        .rest {
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .info-superior {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+        .-button{
+            display: flex;
+            width: 100%;
+            border: 1px solid white;
+            color: white;
+            font-weight: 600;
+            padding: 6px;
+            border-radius: 9999px;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                border: 1px solid #333C4B;
+                color: #333C4B;
+                background-color: white;
+                transition: 0.3s;
+            }
+            &:active {
+                border: 1px solid #333C4B;
+                color: #333C4B;
+                background-color: white;
+                transition: 0.1s;
+            }
+        }
+        .perfil-information {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .information {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                color: white;
+                .name {
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                .description {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+

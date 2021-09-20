@@ -60,6 +60,7 @@
     flex-wrap:  wrap;
     gap: 8px;
     padding: 12px;
+    overflow-y: scroll;
     img {
         width: calc(50% - 4px);
         height: auto;

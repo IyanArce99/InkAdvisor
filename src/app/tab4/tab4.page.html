@@ -1,3 +1,24 @@
 <ion-content [fullscreen]="true">
-
+    <div class="container-total">
+        <div class="info-superior">
+            <div class="perfil-information">
+                <img src="../../assets/icon/favicon.png" alt="logo">
+                <div class="information">
+                    <span class="name">Iyo</span>
+                    <span class="description">Madrid</span>
+                </div>
+            </div>
+            <div class="-button">Editar Perfil</div>
+        </div>
+        <div class="tablero-section">
+            <div class="bar">
+                <span *ngFor='let tab of tabs; let index = index;' [ngClass]="{'-active': index === tabSelected}" (click)='changeTab(index)'>
+                    {{tab}}
+                </span>
+            </div>
+            <div class="rest">
+                Resto
+            </div>
+        </div>
+    </div>
 </ion-content>
